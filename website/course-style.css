@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*this is for hidding the icon*/
+nav .fa{
+    display: none;
+    
+}
+
+/*This is for the Courses Page*/
+
+:root {
+    --container-bg-color: #fff;
+
+    --left-button-hover-color: turquoise;
+ 
+    --right-button-hover-color: turquoise;
+    --hover-width: 75%;
+    --other-width: 25%;
+    --speed: 1000ms;
+  }
+  
+.course-header {
+    
+    height: 10vh;
+    width: 100%;
+}
+
+/*This is for the class name nav-links + list */
+.nav-links-course{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links-course ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links-course ul li a{
+    color: #000;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: verdana;
+}
+
+/*Add colour under each text word*/
+.nav-links-course ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links-course ul li:hover::after{
+    width: 100%;
+}
+
+
+  
+
+.button {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    height: 2.5rem;
+    padding-top: 1.3rem;
+    width: 15rem;
+    text-align: center;
+    color: #000;
+    border: black solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transform: translateX(-50%);
+}
+  
+.split.left .button:hover {
+    background-color: var(--left-button-hover-color);
+    border-color: var(--left-button-hover-color);
+}
+  
+.split.right .button:hover {
+    background-color: var(--right-button-hover-color);
+    border-color: var(--right-button-hover-color);
+}
+  
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--container-bg-color);
+}
+  
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+  
+.split.left {
+    left:0;
+    background: url('images/DIOT.jpg') center center no-repeat;
+    background-size: cover;
+}
+  
+.split.left:before {
+    position:absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+}
+  
+.split.right {
+    right:0;
+    background: url('images/DBD.jpg') center center no-repeat;
+    background-size: cover;
+}
+  
+.split.right:before {
+    position:absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+}
+  
+.split.left, .split.right, .split.right:before, .split.left:before {
+    transition: var(--speed) all ease-in-out;
+}
+  
+.hover-left .left {
+    width: var(--hover-width);
+}
+  
+.hover-left .right {
+    width: var(--other-width);
+}
+  
+.hover-left .right:before {
+    z-index: 2;
+}
+  
+  
+.hover-right .right {
+    width: var(--hover-width);
+}
+  
+.hover-right .left {
+    width: var(--other-width);
+}
+  
+.hover-right .left:before {
+    z-index: 2;
+}
+  
+@media(max-width: 800px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .button {
+      width: 12rem;
+    }
+  }
+  
+  @media(max-height: 700px) {
+    .button {
+      top: 70%;
+    }
+  }
+  /*this is for the phone version on website*/
+@media(max-width: 700px){
+    
+    .nav-links-course ul li{
+        display: block;
+    }
+    .nav-links-course{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: black;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links-course ul{
+        padding: 30px;
+    }
+}

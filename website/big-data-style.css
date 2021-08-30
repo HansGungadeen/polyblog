@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*this is for hidding the icon*/
+nav .fa{
+    display: none;
+    
+}
+
+
+/*This is for the Big-Data page*/
+
+.big-data-header{
+    height: 20vh;
+    width: auto;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),
+    url(images/bigdata-logo.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.big-data-header .fa{
+    display: none;
+}
+
+.big-data-header img{
+    
+    width: 150px;
+
+}
+
+.big-data-container{
+    width: 96%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.big-data-container-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.big-data-container-col img{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.big-data-container-col p{
+    padding: 0;
+    color: black;
+    font-family: Verdana;
+}
+
+.big-data-container-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: Verdana;
+}
+
+.big-data-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.big-data-btn:hover{
+    border: 1px solid #f44336;
+    background: turquoise;
+    transition: 1s;
+}
+
+@media(max-width: 700px){
+    .big-data-container{
+        flex-direction: column;
+        
+    }
+    .big-data-container-col img{
+        margin-left: 10px;
+        margin-right: 15px;
+    }
+
+}
